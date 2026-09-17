@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>FAQ · Agentic AI Workshop · AgentiX</title>
-<meta name="description" content="Answers about registration, experience needed, teams, tools, recordings and demos for the AI agent workshop.">
+<meta name="description" content="Answers about expressing interest, invitations, preparation, teams, tools and demos for the AI Agent workshop.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="FAQ · Agentic AI Workshop · AgentiX">
-<meta property="og:description" content="Answers about registration, experience needed, teams, tools, recordings and demos for the AI agent workshop.">
+<meta property="og:description" content="Answers about expressing interest, invitations, preparation, teams, tools and demos for the AI Agent workshop.">
 <meta property="og:image" content="https://YOUR-DOMAIN/og-image.png">
 <meta property="og:url" content="https://YOUR-DOMAIN/faq.html">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✴️</text></svg>">
+<link rel="icon" type="image/jpeg" href="assets/logos/productsquadss_logo.jpeg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Caveat:wght@600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
@@ -19,31 +19,48 @@
 <body data-page="faq">
 <div id="nav"></div>
 
-<header class="page-head"><div class="wrap">
+<header class="page-head faq-head"><div class="wrap">
   <div class="eyebrow">FAQ</div>
-  <h1>Questions</h1>
-  <p class="lead">Can't find your answer? <a data-mail>Email us</a>.</p>
+  <h1>Questions, answered.</h1>
+  <p class="lead">Everything you need to know about expressing interest, invitations, preparation, and the workshop day. Need something else? <a data-mail>Email the team</a>.</p>
 </div></header>
-<section style="padding-top:24px"><div class="wrap">
-  <h2 style="font-size:1.3rem">The basics</h2>
-  <details><summary>Is it free?</summary><p data-cfg="cost"></p></details>
-  <details><summary>When and where is it?</summary><p><span data-cfg="dateLabel"></span>, <span data-cfg="timeLabel"></span>, at <span data-cfg="venue"></span>.</p></details>
-  <details><summary>How does registration work?</summary><p>Register on the website. We review every registration and email you when it is approved. Then you pay the registration fee, and we send your ticket.</p></details>
-  <details><summary>When do I pay the fee?</summary><p>Only after your registration is approved. Nothing is charged when you submit the form.</p></details>
-  <details><summary>Why is there a fee?</summary><p>It is a nominal charge to make sure seats go to people who are serious about attending.</p></details>
-  <details><summary>How many seats are there?</summary><p><span data-cfg="seatsLabel"></span>. Registration closes <span data-cfg="closesLabel"></span>.</p></details>
-  <h2 style="font-size:1.3rem;margin-top:32px">Before you come</h2>
-  <details><summary>Do I need coding experience?</summary><p>No. Teams mix roles, and the approach works for developers, QA and product folks alike.</p></details>
-  <details><summary>What tools do I need installed?</summary><p>A laptop with access to Codex or Claude. We'll send setup steps before the event.</p></details>
-  <details><summary>Can I come with my own team?</summary><p>Mention your teammates in the registration and we'll try to seat you together. Teams are finalized in advance.</p></details>
-  <h2 style="font-size:1.3rem;margin-top:32px">On the day</h2>
-  <details><summary>What will we build?</summary><p>A small agent for a practical problem, such as refinement, test case creation or bug analysis. See <a href="build.html">What You'll Build</a>.</p></details>
-  <details><summary>Will sessions be recorded?</summary><p>The opening session may be recorded. Build time won't be.</p></details>
-  <details><summary>How are demo teams selected?</summary><p>Facilitators pick two teams based on how well their agent solves the problem and how clearly they can show it.</p></details>
+<section class="faq-page"><div class="wrap faq-layout">
+  <aside class="faq-rail">
+    <div class="eyebrow">Browse</div>
+    <div class="faq-nav" role="navigation" aria-label="FAQ categories">
+      <a href="#registration"><span>01</span>Interest &amp; invitations</a>
+      <a href="#preparation"><span>02</span>Preparation</a>
+      <a href="#workshop-day"><span>03</span>Workshop day</a>
+    </div>
+    <div class="faq-help"><strong>Need a direct answer?</strong><p>Your designated CSQA volunteer can help with readiness questions and blockers.</p><a data-mail>Email the team →</a></div>
+  </aside>
+  <div class="faq-main">
+    <section class="faq-group" id="registration">
+      <div class="faq-group-head"><span>01</span><div><div class="eyebrow">Interest &amp; invitations</div><h2>The essentials</h2></div></div>
+      <details open><summary>Is it free?</summary><p data-cfg="cost"></p></details>
+      <details><summary>When and where is it?</summary><p><span data-cfg="dateLabel"></span>, <span data-cfg="timeLabel"></span>, at <span data-cfg="venue"></span>.</p></details>
+      <details><summary>How does the expression of interest process work?</summary><p>Submit your interest on the website. The CSQA Team reviews every profile and invites selected participants to register. If invited, you complete the payment and then receive your ticket and setup details.</p></details>
+      <details><summary>When do I pay the fee?</summary><p>Only after the CSQA Team selects your profile and invites you to register. Nothing is charged when you submit your interest.</p></details>
+      <details><summary>Why is there a fee?</summary><p>The nominal fee helps confirm committed attendance, plan the event logistics responsibly, and deliver the best possible workshop experience for every attendee.</p></details>
+      <details><summary>How many seats are there?</summary><p>We are planning for 50–75 participants. Capacity may increase based on the number of interest submissions and the arrangements needed to maintain a high-quality experience. Expressions of interest close <span data-cfg="closesLabel"></span>.</p></details>
+    </section>
+    <section class="faq-group" id="preparation">
+      <div class="faq-group-head"><span>02</span><div><div class="eyebrow">Preparation</div><h2>Before you come</h2></div></div>
+      <details><summary>Do I need coding experience?</summary><p>No. Teams bring together different roles and experience levels, and no prior AI Agent-building experience is required.</p></details>
+      <details><summary>What tools do I need installed?</summary><p>Bring a laptop. We will share the required AI access, software, and setup steps before the event. Your designated CSQA volunteer will help resolve any readiness blockers.</p></details>
+      <details><summary>Can I come with my own team?</summary><p>Coming with colleagues does not affect team formation. The CSQA Group will assign teams based on participants' experience and expertise to create balanced, effective groups.</p></details>
+    </section>
+    <section class="faq-group" id="workshop-day">
+      <div class="faq-group-head"><span>03</span><div><div class="eyebrow">Workshop day</div><h2>Building together</h2></div></div>
+      <details><summary>What will we build?</summary><p>Each team will receive an assigned practical problem and build an AI Agent during the three-hour build session. The <a href="build.html">What You'll Build</a> page shows illustrative examples.</p></details>
+      <details><summary>Will sessions be recorded?</summary><p>The opening session may be recorded. Build time will not be recorded.</p></details>
+      <details><summary>How are demo teams selected?</summary><p>Facilitators will select two teams based on how effectively their Agent addresses the assigned problem and how clearly the team presents its work.</p></details>
+    </section>
+  </div>
 </div></section>
 <section class="alt"><div class="wrap reveal cta-band">
-  <h2>Still keen?</h2><p class="lead" style="margin:0 auto">Seats are limited, and registrations are reviewed.</p>
-  <div class="cta"><a class="btn btn-primary" href="register.html">Register now →</a></div>
+  <h2>Interested in joining?</h2><p class="lead" style="margin:0 auto">Express your interest to be considered for an invitation.</p>
+  <div class="cta"><a class="btn btn-primary" href="register.html">Express Interest →</a></div>
 </div></section>
 <div id="footer"></div>
 <script src="assets/config.js"></script>

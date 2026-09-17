@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>What You'll Build · Agentic AI Workshop · AgentiX</title>
-<meta name="description" content="The Codex/Claude + Skills + MCP approach, and example agents teams build: Refinement, Test Case Creation and Bug Analysis.">
+<meta name="description" content="A practical AI Agent architecture using AI reasoning, Skills and MCP tools, plus example agents teams can build.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="What You'll Build · Agentic AI Workshop · AgentiX">
-<meta property="og:description" content="The Codex/Claude + Skills + MCP approach, and example agents teams build: Refinement, Test Case Creation and Bug Analysis.">
+<meta property="og:description" content="A practical AI Agent architecture using AI reasoning, Skills and MCP tools, plus example agents teams can build.">
 <meta property="og:image" content="https://YOUR-DOMAIN/og-image.png">
 <meta property="og:url" content="https://YOUR-DOMAIN/build.html">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✴️</text></svg>">
+<link rel="icon" type="image/jpeg" href="assets/logos/productsquadss_logo.jpeg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Caveat:wght@600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
@@ -22,19 +22,55 @@
 <header class="page-head"><div class="wrap">
   <div class="eyebrow">What you'll build</div>
   <h1>One approach, applied to a real problem</h1>
-  <p class="lead">In the opening session we build an agent live. Then your team uses the same approach on a small, practical problem.</p>
+  <p class="lead">The opening expert-led session introduces the first steps of building an AI agentic solution, including what an agent is, best practices, Skills, MCPs, and how the pieces fit together. Your team then applies these foundations to a small, practical problem.</p>
 </div></header>
 <section style="padding-top:24px"><div class="wrap">
-  <h2>The approach</h2>
-  <div class="steps">
-    <div class="card step"><div class="ic">🧠</div><h3>Model</h3><p>Codex / Claude does the reasoning</p></div><div class="arrow">→</div>
-    <div class="card step"><div class="ic">📘</div><h3>Skills</h3><p>Packaged instructions and know-how</p></div><div class="arrow">→</div>
-    <div class="card step"><div class="ic">🔌</div><h3>MCP</h3><p>Connects to tools like Jira, GitHub, docs</p></div>
+  <div class="eyebrow">The approach</div>
+  <h2>AI Agent architecture</h2>
+  <p class="lead">Your team will build an AI Agent that understands a request, reasons through it, applies the right Skills, uses MCP tools when needed, and produces a useful result.</p>
+  <div class="agent-map" role="img" aria-label="Instructions and input flow into an AI Agent. The Agent uses AI reasoning, calls required Skills, triggers necessary MCP tools, and produces an output.">
+    <div class="arch-node arch-input">
+      <span class="arch-tag">Input</span>
+      <span class="arch-symbol" aria-hidden="true">↓</span>
+      <h3>Instructions &amp; Input</h3>
+      <p>A goal, supporting context, and the information the Agent needs.</p>
+    </div>
+    <div class="arch-link" aria-hidden="true"><span>→</span></div>
+    <div class="agent-shell">
+      <div class="agent-shell-head"><strong>AI Agent</strong><span>Reasons, selects the right capability, and acts</span></div>
+      <div class="agent-pipeline">
+        <div class="agent-component comp-reasoning">
+          <span class="arch-tag">Reason</span>
+          <h3>AI Reasoning</h3>
+          <p>Interprets the request and plans the next action.</p>
+        </div>
+        <div class="agent-link agent-link-inner" aria-hidden="true"><span>→</span></div>
+        <div class="agent-component comp-skills">
+          <span class="arch-tag">Apply</span>
+          <h3>Required Skills</h3>
+          <p>Uses packaged instructions and domain know-how.</p>
+        </div>
+        <div class="agent-link agent-link-inner" aria-hidden="true"><span>→</span></div>
+        <div class="agent-component comp-tools">
+          <span class="arch-tag">Act</span>
+          <h3>MCP Tools</h3>
+          <p>Connects to the systems and tools needed to complete the task.</p>
+        </div>
+      </div>
+    </div>
+    <div class="arch-link" aria-hidden="true"><span>→</span></div>
+    <div class="arch-node arch-output">
+      <span class="arch-tag">Output</span>
+      <span class="arch-symbol" aria-hidden="true">✓</span>
+      <h3>Useful Result</h3>
+      <p>A completed action, recommendation, update, or next step.</p>
+    </div>
   </div>
 </div></section>
 <section class="alt"><div class="wrap reveal">
-  <div class="eyebrow">Example problem statements</div>
-  <h2>Pick one, or bring your own</h2>
+  <div class="eyebrow">Illustrative examples</div>
+  <h2>What an assigned problem could look like</h2>
+  <p class="lead">After the opening session, you will meet your assigned team and receive a problem statement. Your team will then have three hours to ideate, divide the work, and implement an AI Agent.</p>
 <div class="card usecase" id="refinement"><div class="ic">📝</div><h3>Refinement Agent</h3><p>Turns rough tickets into well-formed stories with acceptance criteria.</p>
   <div class="io">in: "login is slow sometimes"<br><em>out:</em> story + acceptance criteria + open questions</div>
   <div class="detail">
@@ -42,39 +78,39 @@
     <div><h4>MCP tools it might connect</h4><ul><li>Jira: read and update tickets</li><li>Confluence: product context</li></ul></div>
   </div>
   <p style="margin-top:12px"><b>Stretch goal:</b> flag tickets that are too big and suggest how to split them.</p>
-  <a class="more" href="register.html?agent=refinement">I want to build this →</a></div><div class="card usecase" id="test-cases"><div class="ic">✅</div><h3>Test Case Creation Agent</h3><p>Writes structured test cases from a user story or spec.</p>
+  </div><div class="card usecase" id="test-cases"><div class="ic">✅</div><h3>Test Case Creation Agent</h3><p>Writes structured test cases from a user story or spec.</p>
   <div class="io">in: user story or spec<br><em>out:</em> positive, negative and edge cases</div>
   <div class="detail">
     <div><h4>Skills it might use</h4><ul><li>Test-case format</li><li>Edge-case heuristics</li></ul></div>
     <div><h4>MCP tools it might connect</h4><ul><li>Jira: read stories</li><li>Test management tool or a spreadsheet</li></ul></div>
   </div>
   <p style="margin-top:12px"><b>Stretch goal:</b> turn the cases into automated test skeletons.</p>
-  <a class="more" href="register.html?agent=test">I want to build this →</a></div><div class="card usecase" id="bug-analysis"><div class="ic">🐞</div><h3>Bug Analysis Agent</h3><p>Triages bug reports and suggests likely root causes and next steps.</p>
+  </div><div class="card usecase" id="bug-analysis"><div class="ic">🐞</div><h3>Bug Analysis Agent</h3><p>Triages bug reports and suggests likely root causes and next steps.</p>
   <div class="io">in: bug report + logs<br><em>out:</em> severity, likely cause, next step</div>
   <div class="detail">
     <div><h4>Skills it might use</h4><ul><li>Triage rubric</li><li>Log-reading guide</li></ul></div>
     <div><h4>MCP tools it might connect</h4><ul><li>Jira: read bugs</li><li>GitHub: search recent changes</li></ul></div>
   </div>
   <p style="margin-top:12px"><b>Stretch goal:</b> find duplicate bugs and link them.</p>
-  <a class="more" href="register.html?agent=bug">I want to build this →</a></div>
-  <p class="note">These are examples of common agent use cases. The session focuses on the approach, not a deep dive into each.</p>
+  </div>
+  <p class="note">These examples illustrate the scope and format of the challenges. The actual problem statement will be assigned to each team on the day.</p>
 </div></section>
 <section><div class="wrap reveal">
   <div class="eyebrow">Before you come</div>
-  <h2>Who it's for &amp; what to bring</h2>
+  <h2>Who it's for &amp; how to prepare</h2>
   <div class="two">
-    <div class="card"><h3>👋 Who should attend</h3><ul class="clean"><li>Developers and QA engineers</li><li>Product managers and business analysts</li><li>Tech leads and engineering managers</li><li>No prior agent-building experience needed</li></ul></div>
-    <div class="card"><h3>🎒 Prep checklist</h3><ul class="clean">
-      <li><label><input type="checkbox"> Laptop and charger</label></li>
-      <li><label><input type="checkbox"> Access to Codex or Claude (setup details sent beforehand)</label></li>
-      <li><label><input type="checkbox"> Signed in to the tools your team will use</label></li>
-      <li><label><input type="checkbox"> A problem you'd like an agent to solve</label></li>
+    <div class="card"><h3>👋 Who should attend</h3><ul class="clean"><li>Developers, QA engineers, product managers, and business analysts</li><li>Tech leads and engineering managers exploring practical agentic AI</li><li>Professionals ready to collaborate on an assigned team challenge</li><li>No prior AI Agent-building experience required</li></ul></div>
+    <div class="card"><h3>🎒 Readiness essentials</h3><ul class="clean prep-list">
+      <li><label class="check"><input type="checkbox"> <span>Bring your laptop and charger</span></label></li>
+      <li><label class="check"><input type="checkbox"> <span>Complete the software, access, and prerequisites shared in advance</span></label></li>
+      <li><label class="check"><input type="checkbox"> <span>Verify that the required tools and accounts are working</span></label></li>
+      <li><label class="check"><input type="checkbox"> <span>Work with your designated CSQA volunteer to resolve any blockers before the workshop</span></label></li>
     </ul></div>
   </div>
 </div></section>
 <section class="alt"><div class="wrap reveal cta-band">
-  <h2>Pick your agent and save a seat</h2><p class="lead" style="margin:0 auto">Tell us what you'd like to build when you register.</p>
-  <div class="cta"><a class="btn btn-primary" href="register.html">Register now →</a></div>
+  <h2>Interested in the team build?</h2><p class="lead" style="margin:0 auto">Express your interest to be considered for an invitation to the three-hour AI Agent build.</p>
+  <div class="cta"><a class="btn btn-primary" href="register.html">Express Interest →</a></div>
 </div></section>
 <div id="footer"></div>
 <script src="assets/config.js"></script>

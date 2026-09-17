@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Register · Agentic AI Workshop · AgentiX</title>
-<meta name="description" content="Register for the half-day, build-first AI agent workshop. Seats are limited. Registrations are reviewed before tickets are granted.">
+<title>Express Interest · Agentic AI Workshop · AgentiX</title>
+<meta name="description" content="Express your interest in the half-day AI Agent workshop. CSQA reviews every submission before inviting selected participants to register.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Register · Agentic AI Workshop · AgentiX">
-<meta property="og:description" content="Register for the half-day, build-first AI agent workshop. Seats are limited. Registrations are reviewed before tickets are granted.">
+<meta property="og:title" content="Express Interest · Agentic AI Workshop · AgentiX">
+<meta property="og:description" content="Express your interest in the half-day AI Agent workshop. CSQA reviews every submission before inviting selected participants to register.">
 <meta property="og:image" content="https://YOUR-DOMAIN/og-image.png">
 <meta property="og:url" content="https://YOUR-DOMAIN/register.html">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✴️</text></svg>">
+<link rel="icon" type="image/jpeg" href="assets/logos/productsquadss_logo.jpeg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Caveat:wght@600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
@@ -20,17 +20,17 @@
 <div id="nav"></div>
 
 <header class="page-head"><div class="wrap">
-  <div class="eyebrow">Registration</div>
-  <h1>Register your interest</h1>
-  <p class="lead">📅 <span data-cfg="dateLabel"></span> · ⏰ <span data-cfg="timeLabel"></span> · 📍 <span data-cfg="venue"></span><br>Seats are limited, so we review every registration before granting tickets. Registration closes <b data-cfg="closesLabel"></b>.</p>
+  <div class="eyebrow">Expression of interest</div>
+  <h1>Express your interest</h1>
+  <p class="lead">📅 <span data-cfg="dateLabel"></span> · ⏰ <span data-cfg="timeLabel"></span> · 📍 <span data-cfg="venue"></span><br>Seats are limited. The CSQA Team reviews every submission before inviting selected participants to register. Expressions of interest close <b data-cfg="closesLabel"></b>.</p>
 </div></header>
 <section style="padding-top:24px"><div class="wrap">
-  <div class="eyebrow">How registration works</div>
+  <div class="eyebrow">How it works</div>
   <div class="grid">
-    <div class="card"><div class="ic">📝</div><h3>1. Register</h3><p>Fill in the form. It takes about two minutes and nothing is charged yet.</p></div>
-    <div class="card"><div class="ic">🔍</div><h3>2. We review</h3><p>We review every registration and email you once yours is approved.</p></div>
-    <div class="card"><div class="ic">💳</div><h3>3. Pay <span data-cfg="fee">₹249</span></h3><p>After approval, pay the registration fee using the link in the email.</p></div>
-    <div class="card"><div class="ic">🎟️</div><h3>4. Get your ticket</h3><p>Your ticket, team and setup details follow once payment is done.</p></div>
+    <div class="card"><div class="ic">📝</div><h3>1. Express interest</h3><p>Share your details and profile. Submitting this form does not secure a seat.</p></div>
+    <div class="card"><div class="ic">🔍</div><h3>2. CSQA reviews</h3><p>The CSQA Team reviews submissions based on participant profiles and available seats.</p></div>
+    <div class="card"><div class="ic">💳</div><h3>3. If invited, pay <span data-cfg="fee">₹249</span></h3><p>Selected participants receive an invitation and payment link by email.</p></div>
+    <div class="card"><div class="ic">🎟️</div><h3>4. Registration confirmed</h3><p>After payment, you receive your ticket and workshop setup details.</p></div>
   </div>
   <div class="card" style="margin-top:32px">
     <form id="regForm" novalidate>
@@ -39,17 +39,15 @@
       <div class="field"><label class="l" for="company">Company *</label><input id="company" name="company" required autocomplete="organization"><span class="err"></span></div>
       <div class="field"><label class="l" for="role">Role *</label><select id="role" name="role" required><option value="">Select…</option><option>Developer</option><option>QA</option><option>PM / BA</option><option>Tech Lead</option><option>Other</option></select><span class="err"></span></div>
       <div class="field"><label class="l" for="exp">Experience with AI tools</label><select id="exp" name="experience"><option>Beginner</option><option>Intermediate</option><option>Advanced</option></select><span class="err"></span></div>
-      <div class="field"><label class="l" for="agent">Which agent would you like to build?</label><select id="agent" name="agent"><option>Open to anything</option><option>Refinement Agent</option><option>Test Case Creation Agent</option><option>Bug Analysis Agent</option></select><span class="err"></span></div>
       <div class="field"><label class="l" for="linkedin">LinkedIn profile URL</label><input id="linkedin" name="linkedin" type="url" placeholder="https://linkedin.com/in/…"><span class="err"></span></div>
-      <div class="field"><label class="l" for="teammates">Teammates you'd like to sit with</label><input id="teammates" name="teammates"><span class="err"></span></div>
       <div class="field full"><label class="l" for="diet">Dietary needs</label><input id="diet" name="dietary"><span class="err"></span></div>
-      <div class="field full"><label class="check"><input type="checkbox" id="consent" name="consent" required> <span>I understand my registration will be reviewed, and that if approved I will pay the registration fee to receive my ticket. I agree to be contacted about this workshop. *</span></label><span class="err"></span></div>
-      <div class="field full"><button class="btn btn-primary" type="submit" id="submitBtn">Submit registration →</button></div>
+      <div class="field full"><label class="check"><input type="checkbox" id="consent" name="consent" required> <span>I understand that submitting my interest does not secure a seat. If invited, I will pay the registration fee to confirm my registration. I agree to be contacted about this workshop. *</span></label><span class="err"></span></div>
+      <div class="field full"><button class="btn btn-primary" type="submit" id="submitBtn">Submit interest →</button></div>
     </form>
     <div class="success" id="success" role="status">
-      <div style="font-size:3rem">🎉</div><h3>Registration received!</h3>
-      <p class="lead" style="margin:0 auto 20px">We'll review your details and email you. Once approved, pay the registration fee to get your ticket.</p>
-      <div class="cta" style="justify-content:center"><button class="btn btn-primary" id="icsBtn" type="button">📅 Add to calendar</button><a class="btn btn-ghost share" target="_blank" rel="noopener">Share on LinkedIn</a></div>
+      <div style="font-size:3rem">🎉</div><h3>Interest received!</h3>
+      <p class="lead" style="margin:0 auto 20px">The CSQA Team will review your profile. If selected, you will receive an invitation with payment instructions.</p>
+      <div class="cta" style="justify-content:center"><a class="btn btn-ghost" href="index.html">Back to event details</a><a class="btn btn-ghost share" target="_blank" rel="noopener">Share on LinkedIn</a></div>
     </div>
   </div>
 </div></section>
