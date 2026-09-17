@@ -3,7 +3,7 @@ const CONFIG = {
   name: "Agentic AI Workshop",
   shortName: "AgentiX",
   host: "ProductSquads",
-  start: "2026-10-02T14:00:00+05:30",   // ISO start time, with timezone offset
+  start: "2026-10-02T09:30:00+05:30",   // ISO start time, with timezone offset
   timezone: "IST",
   timeZoneId: "Asia/Kolkata",
   venue: "ProductSquads, Ahmedabad",
@@ -15,7 +15,7 @@ const CONFIG = {
   hashtag: "#AgentiX",
   contactEmail: "events@example.com",
   // Google Apps Script web app URL that saves registrations to the Google Sheet (see README).
-  formEndpoint: "",
+  formEndpoint: "https://script.google.com/macros/s/AKfycbzsEp4DXprCQZNFb0H7XVwK70rFfQDs9cdQg20pJSWGwMD85G_Q3cPCfCaJkAUxk8Vg/exec",
   // Or send everyone to an external form (Luma, Google Form). Replaces the built-in form.
   externalRegisterUrl: ""
 };
@@ -24,6 +24,9 @@ const AGENDA = [
   {title: "Building an Agent & Best Practices", short: "Talk", min: 45, color: "var(--primary)",
    desc: "How to build an agent end to end with Codex/Claude + Skills + MCP, plus the best practices we've learned.",
    points: ["What an agent is, and when you need one", "Live build: model + Skills + MCP", "Best practices: scoping, prompts, tool design, testing"]},
+  {title: "Tea Break & Networking", short: "Break", min: 15, color: "#9aa0b8",
+   desc: "A short break to grab a tea or coffee and meet other attendees.",
+   points: ["Tea and coffee", "Meet the other builders"]},
   {title: "Team Forming & Seating", short: "Teams", min: 30, color: "var(--accent-3)",
    desc: "Teams and seating are finalized in advance, so this is just a quick settle-in.",
    points: ["Find your team and table", "Pick your problem statement", "Check that your tools are set up"]},
