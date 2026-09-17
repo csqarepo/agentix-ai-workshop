@@ -100,17 +100,17 @@
       const data = Object.fromEntries(new FormData(form));
       const btn = document.getElementById("submitBtn"); btn.disabled = true; btn.textContent = "Registering…";
       try {
-        if (CONFIG.formEndpoint) {
-          const r = await fetch(CONFIG.formEndpoint, {method: "POST", headers: {"Content-Type": "application/json", Accept: "application/json"}, body: JSON.stringify(data)});
-          if (!r.ok) throw new Error();
-        } else {
-          const body = Object.entries(data).map(([k, v]) => `${k}: ${v}`).join("\n");
-          location.href = `mailto:${CONFIG.contactEmail}?subject=${encodeURIComponent("Workshop registration")}&body=${encodeURIComponent(body)}`;
-        }
+        if (!CONFIG.formEndpoint) throw new Error("Registration endpoint is not configured");
+        data.consent = data.consent ? "Yes" : "No";
+        // text/plain avoids a CORS preflight, which Google Apps Script does not support
+        const r = await fetch(CONFIG.formEndpoint, {method: "POST", headers: {"Content-Type": "text/plain;charset=utf-8"}, body: JSON.stringify(data)});
+        const res = await r.json();
+        if (!res.ok) throw new Error(res.error || "Save failed");
         form.style.display = "none"; document.getElementById("success").classList.add("show");
-      } catch {
+      } catch (err) {
+        console.error(err);
         btn.disabled = false; btn.textContent = "Submit registration →";
-        alert("Something went wrong. Please try again or email " + CONFIG.contactEmail);
+        alert("Sorry, we couldn't save your registration. Please try again, or email " + CONFIG.contactEmail);
       }
     });
   }

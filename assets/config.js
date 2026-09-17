@@ -14,7 +14,7 @@ const CONFIG = {
   registrationCloses: "2026-09-28",
   hashtag: "#AgentiX",
   contactEmail: "events@example.com",
-  // Form endpoint (Formspree, Google Apps Script, etc.). Leave empty to fall back to email.
+  // Google Apps Script web app URL that saves registrations to the Google Sheet (see README).
   formEndpoint: "",
   // Or send everyone to an external form (Luma, Google Form). Replaces the built-in form.
   externalRegisterUrl: ""
