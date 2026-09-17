@@ -1,12 +1,22 @@
 # AI Agent Workshop website
 
-A single-file static site (`index.html`) with no build step.
+A static multi-page site with no build step.
+
+| Page | What's on it |
+|---|---|
+| `index.html` | Hero, why attend, agenda summary, example agents |
+| `agenda.html` | Full timeline with what happens in each session |
+| `build.html` | The Codex/Claude + Skills + MCP approach, detailed example agents, prep checklist |
+| `faq.html` | Grouped FAQ |
+| `register.html` | Registration form (`?agent=refinement` / `test` / `bug` preselects a choice) |
+
+Shared files: `assets/styles.css`, `assets/site.js` (nav, footer, form, calendar), `assets/config.js` (event details).
 
 ## Run locally
 Open `index.html` in a browser, or run `python3 -m http.server 8000` in this folder.
 
 ## Edit event details
-At the bottom of `index.html`, edit `CONFIG` for the name, host, start time, venue, seats, cost, closing date, hashtag and contact email. Edit `AGENDA` for the sessions. Times are calculated from `start`.
+In `assets/config.js`, edit `CONFIG` for the name, host, start time, venue, seats, cost, closing date, hashtag and contact email. Edit `AGENDA` for the sessions. Times are calculated from `start`.
 
 ## Registration
 - **Built-in form:** set `formEndpoint` to a Formspree URL (for example `https://formspree.io/f/xxxx`) or a Google Apps Script web app that writes to a Sheet.

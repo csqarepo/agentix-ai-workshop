@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Register · Build an AI Agent Workshop</title>
+<meta name="description" content="Register for the half-day, build-first AI agent workshop. Seats are limited.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Register · Build an AI Agent Workshop">
+<meta property="og:description" content="Register for the half-day, build-first AI agent workshop. Seats are limited.">
+<meta property="og:image" content="https://YOUR-DOMAIN/og-image.png">
+<meta property="og:url" content="https://YOUR-DOMAIN/register.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="register">
+<div id="nav"></div>
+
+<header class="page-head"><div class="wrap">
+  <div class="eyebrow">Registration</div>
+  <h1>Save your seat</h1>
+  <p class="lead">📅 <span data-cfg="dateLabel"></span> · ⏰ <span data-cfg="timeLabel"></span> · 📍 <span data-cfg="venue"></span><br>Seats are limited and teams are formed in advance. Registration closes <b data-cfg="closesLabel"></b>.</p>
+</div></header>
+<section style="padding-top:24px"><div class="wrap">
+  <div class="card">
+    <form id="regForm" novalidate>
+      <div class="field"><label class="l" for="name">Full name *</label><input id="name" name="name" required autocomplete="name"><span class="err"></span></div>
+      <div class="field"><label class="l" for="email">Work email *</label><input id="email" name="email" type="email" required autocomplete="email"><span class="err"></span></div>
+      <div class="field"><label class="l" for="company">Company *</label><input id="company" name="company" required autocomplete="organization"><span class="err"></span></div>
+      <div class="field"><label class="l" for="role">Role *</label><select id="role" name="role" required><option value="">Select…</option><option>Developer</option><option>QA</option><option>PM / BA</option><option>Tech Lead</option><option>Other</option></select><span class="err"></span></div>
+      <div class="field"><label class="l" for="exp">Experience with AI tools</label><select id="exp" name="experience"><option>Beginner</option><option>Intermediate</option><option>Advanced</option></select><span class="err"></span></div>
+      <div class="field"><label class="l" for="agent">Which agent would you like to build?</label><select id="agent" name="agent"><option>Open to anything</option><option>Refinement Agent</option><option>Test Case Creation Agent</option><option>Bug Analysis Agent</option></select><span class="err"></span></div>
+      <div class="field"><label class="l" for="linkedin">LinkedIn profile URL</label><input id="linkedin" name="linkedin" type="url" placeholder="https://linkedin.com/in/…"><span class="err"></span></div>
+      <div class="field"><label class="l" for="teammates">Teammates you'd like to sit with</label><input id="teammates" name="teammates"><span class="err"></span></div>
+      <div class="field full"><label class="l" for="diet">Dietary needs</label><input id="diet" name="dietary"><span class="err"></span></div>
+      <div class="field full"><label class="check"><input type="checkbox" id="consent" name="consent" required> <span>I agree to be contacted about this workshop. *</span></label><span class="err"></span></div>
+      <div class="field full"><button class="btn btn-primary" type="submit" id="submitBtn">Register →</button></div>
+    </form>
+    <div class="success" id="success" role="status">
+      <div style="font-size:3rem">🎉</div><h3>You're registered!</h3>
+      <p class="lead" style="margin:0 auto 20px">We'll email your team and setup details before the workshop.</p>
+      <div class="cta" style="justify-content:center"><button class="btn btn-primary" id="icsBtn" type="button">📅 Add to calendar</button><a class="btn btn-ghost share" target="_blank" rel="noopener">Share on LinkedIn</a></div>
+    </div>
+  </div>
+</div></section>
+
+<div id="footer"></div>
+<script src="assets/config.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What You'll Build · Build an AI Agent Workshop</title>
+<meta name="description" content="The Codex/Claude + Skills + MCP approach, and example agents teams build: Refinement, Test Case Creation and Bug Analysis.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="What You'll Build · Build an AI Agent Workshop">
+<meta property="og:description" content="The Codex/Claude + Skills + MCP approach, and example agents teams build: Refinement, Test Case Creation and Bug Analysis.">
+<meta property="og:image" content="https://YOUR-DOMAIN/og-image.png">
+<meta property="og:url" content="https://YOUR-DOMAIN/build.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="build">
+<div id="nav"></div>
+
+<header class="page-head"><div class="wrap">
+  <div class="eyebrow">What you'll build</div>
+  <h1>One approach, applied to a real problem</h1>
+  <p class="lead">In the opening session we build an agent live. Then your team uses the same approach on a small, practical problem.</p>
+</div></header>
+<section style="padding-top:24px"><div class="wrap">
+  <h2>The approach</h2>
+  <div class="steps">
+    <div class="card step"><div class="ic">🧠</div><h3>Model</h3><p>Codex / Claude does the reasoning</p></div><div class="arrow">→</div>
+    <div class="card step"><div class="ic">📘</div><h3>Skills</h3><p>Packaged instructions and know-how</p></div><div class="arrow">→</div>
+    <div class="card step"><div class="ic">🔌</div><h3>MCP</h3><p>Connects to tools like Jira, GitHub, docs</p></div>
+  </div>
+</div></section>
+<section class="alt"><div class="wrap reveal">
+  <div class="eyebrow">Example problem statements</div>
+  <h2>Pick one, or bring your own</h2>
+<div class="card usecase" id="refinement"><div class="ic">📝</div><h3>Refinement Agent</h3><p>Turns rough tickets into well-formed stories with acceptance criteria.</p>
+  <div class="io">in: "login is slow sometimes"<br><em>out:</em> story + acceptance criteria + open questions</div>
+  <div class="detail">
+    <div><h4>Skills it might use</h4><ul><li>Story-writing template</li><li>Acceptance-criteria checklist</li></ul></div>
+    <div><h4>MCP tools it might connect</h4><ul><li>Jira: read and update tickets</li><li>Confluence: product context</li></ul></div>
+  </div>
+  <p style="margin-top:12px"><b>Stretch goal:</b> flag tickets that are too big and suggest how to split them.</p>
+  <a class="more" href="register.html?agent=refinement">I want to build this →</a></div><div class="card usecase" id="test-cases"><div class="ic">✅</div><h3>Test Case Creation Agent</h3><p>Writes structured test cases from a user story or spec.</p>
+  <div class="io">in: user story or spec<br><em>out:</em> positive, negative and edge cases</div>
+  <div class="detail">
+    <div><h4>Skills it might use</h4><ul><li>Test-case format</li><li>Edge-case heuristics</li></ul></div>
+    <div><h4>MCP tools it might connect</h4><ul><li>Jira: read stories</li><li>Test management tool or a spreadsheet</li></ul></div>
+  </div>
+  <p style="margin-top:12px"><b>Stretch goal:</b> turn the cases into automated test skeletons.</p>
+  <a class="more" href="register.html?agent=test">I want to build this →</a></div><div class="card usecase" id="bug-analysis"><div class="ic">🐞</div><h3>Bug Analysis Agent</h3><p>Triages bug reports and suggests likely root causes and next steps.</p>
+  <div class="io">in: bug report + logs<br><em>out:</em> severity, likely cause, next step</div>
+  <div class="detail">
+    <div><h4>Skills it might use</h4><ul><li>Triage rubric</li><li>Log-reading guide</li></ul></div>
+    <div><h4>MCP tools it might connect</h4><ul><li>Jira: read bugs</li><li>GitHub: search recent changes</li></ul></div>
+  </div>
+  <p style="margin-top:12px"><b>Stretch goal:</b> find duplicate bugs and link them.</p>
+  <a class="more" href="register.html?agent=bug">I want to build this →</a></div>
+  <p class="note">These are examples of common agent use cases. The session focuses on the approach, not a deep dive into each.</p>
+</div></section>
+<section><div class="wrap reveal">
+  <div class="eyebrow">Before you come</div>
+  <h2>Who it's for &amp; what to bring</h2>
+  <div class="two">
+    <div class="card"><h3>👋 Who should attend</h3><ul class="clean"><li>Developers and QA engineers</li><li>Product managers and business analysts</li><li>Tech leads and engineering managers</li><li>No prior agent-building experience needed</li></ul></div>
+    <div class="card"><h3>🎒 Prep checklist</h3><ul class="clean">
+      <li><label><input type="checkbox"> Laptop and charger</label></li>
+      <li><label><input type="checkbox"> Access to Codex or Claude (setup details sent beforehand)</label></li>
+      <li><label><input type="checkbox"> Signed in to the tools your team will use</label></li>
+      <li><label><input type="checkbox"> A problem you'd like an agent to solve</label></li>
+    </ul></div>
+  </div>
+</div></section>
+<section class="alt"><div class="wrap reveal cta-band">
+  <h2>Pick your agent and save a seat</h2><p class="lead" style="margin:0 auto">Tell us what you'd like to build when you register.</p>
+  <div class="cta"><a class="btn btn-primary" href="register.html">Register now →</a></div>
+</div></section>
+<div id="footer"></div>
+<script src="assets/config.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>
