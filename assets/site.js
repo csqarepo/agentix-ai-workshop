@@ -109,7 +109,7 @@
         }
         form.style.display = "none"; document.getElementById("success").classList.add("show");
       } catch {
-        btn.disabled = false; btn.textContent = "Register →";
+        btn.disabled = false; btn.textContent = "Submit registration →";
         alert("Something went wrong. Please try again or email " + CONFIG.contactEmail);
       }
     });

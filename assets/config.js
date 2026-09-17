@@ -6,9 +6,11 @@ const CONFIG = {
   start: "2026-10-02T14:00:00+05:30",   // ISO start time, with timezone offset
   timezone: "IST",
   timeZoneId: "Asia/Kolkata",
-  venue: "ProductSquads, [City]",
+  venue: "ProductSquads, Ahmedabad",
+  city: "Ahmedabad",
+  fee: "₹249",
   seats: 40,
-  cost: "Yes, the workshop is free to attend.",
+  cost: "No. There is a nominal registration fee of ₹249, so seats go to people who are serious about attending. You pay it only after your registration is approved.",
   registrationCloses: "2026-09-28",
   hashtag: "#AgentiX",
   contactEmail: "events@example.com",

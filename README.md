@@ -16,7 +16,7 @@ Shared files: `assets/styles.css`, `assets/site.js` (nav, footer, form, calendar
 Open `index.html` in a browser, or run `python3 -m http.server 8000` in this folder.
 
 ## Edit event details
-In `assets/config.js`, edit `CONFIG` for the name, host, start time, venue, seats, cost, closing date, hashtag and contact email. Edit `AGENDA` for the sessions. Times are calculated from `start`.
+In `assets/config.js`, edit `CONFIG` for the name, host, start time, venue, city, fee, seats, cost, closing date, hashtag and contact email. Edit `AGENDA` for the sessions. Times are calculated from `start`.
 
 ## Registration
 - **Built-in form:** set `formEndpoint` to a Formspree URL (for example `https://formspree.io/f/xxxx`) or a Google Apps Script web app that writes to a Sheet.
