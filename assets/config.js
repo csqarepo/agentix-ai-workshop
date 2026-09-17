@@ -1,16 +1,16 @@
 /* ===== Edit event details here. Every page reads from this file. ===== */
 const CONFIG = {
-  name: "Build an AI Agent",
-  shortName: "AgentBuild",
-  host: "[Your Company]",
-  start: "2026-10-10T14:00:00+05:30",   // ISO start time, with timezone offset
+  name: "Agentic AI Workshop",
+  shortName: "AgentiX",
+  host: "ProductSquads",
+  start: "2026-10-02T14:00:00+05:30",   // ISO start time, with timezone offset
   timezone: "IST",
   timeZoneId: "Asia/Kolkata",
-  venue: "[Venue, City]",
+  venue: "ProductSquads, [City]",
   seats: 40,
   cost: "Yes, the workshop is free to attend.",
-  registrationCloses: "2026-10-05",
-  hashtag: "#AgentBuildWorkshop",
+  registrationCloses: "2026-09-28",
+  hashtag: "#AgentiX",
   contactEmail: "events@example.com",
   // Form endpoint (Formspree, Google Apps Script, etc.). Leave empty to fall back to email.
   formEndpoint: "",

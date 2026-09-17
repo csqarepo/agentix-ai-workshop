@@ -3,15 +3,23 @@
   const NAV = [["index.html", "Home", "home"], ["agenda.html", "Agenda", "agenda"], ["build.html", "What You'll Build", "build"], ["faq.html", "FAQ", "faq"]];
 
   // shared nav + footer
+  const PS_MARK = `<svg class="ps-mark" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="psg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b2ff7"/><stop offset="1" stop-color="#5b2bd6"/></linearGradient></defs><path d="M20 2 36 11v18L20 38 4 29V11z" fill="url(#psg)"/><path d="M15 29V12h7a6 6 0 0 1 0 12h-3" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round"/></svg>`;
+  const BRAND = (full) => `
+    ${full ? `<span class="lg-csqa hide-md">CS<b>QA</b><small>Community of Software QA</small></span><span class="sep hide-md"></span>` : ""}
+    <span class="lg-agentix"><span>Agenti<i>X</i></span><small>HUMAN CREATIVITY. AI MULTIPLIED.</small><em>BY CS<b>QA</b></em></span>
+    <span class="sep hide-md"></span>
+    <span class="lg-ps hide-md">${PS_MARK}<span><span class="hosted">Hosted at</span>ProductSquads</span></span>`;
   document.getElementById("nav").outerHTML = `<nav><div class="wrap">
-    <a class="logo" href="index.html">Agent<span>Build</span></a>
+    <a class="brandbar" href="index.html" aria-label="AgentiX by CSQA, hosted at ProductSquads">${BRAND(false)}</a>
     <div class="links" id="links">${NAV.map(([h, l, k]) => `<a href="${h}"${k === page ? ' class="active" aria-current="page"' : ""}>${l}</a>`).join("")}</div>
     <div style="display:flex;gap:8px;align-items:center">
       <a class="btn btn-primary" href="register.html">Register</a>
       <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="links">☰</button>
     </div></div></nav>`;
   document.getElementById("footer").outerHTML = `<footer><div class="wrap">
-    <p><b data-cfg="name"></b> · hosted by <span data-cfg="host"></span></p>
+    <div class="brandbar">${BRAND(true).replaceAll("hide-md","")}</div>
+    <p class="tagline" style="text-align:center"><b data-cfg="name"></b> · Same community. Bigger possibilities.</p>
+    <p>AgentiX by CSQA · Hosted at ProductSquads</p>
     <p>${NAV.map(([h, l]) => `<a href="${h}">${l}</a>`).join(" · ")} · <a data-mail>Contact us</a> · <a class="share" target="_blank" rel="noopener">Share on LinkedIn</a> · <span data-cfg="hashtag"></span></p>
     ${page === "register" ? "" : '<a class="btn btn-primary" href="register.html" style="margin-top:12px">Register now</a>'}
   </div></footer>`;
@@ -110,7 +118,7 @@
   // add to calendar
   document.getElementById("icsBtn")?.addEventListener("click", () => {
     const z = d => d.toISOString().replace(/[-:]/g, "").split(".")[0] + "Z";
-    const ics = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//AgentBuild//EN", "BEGIN:VEVENT", `UID:${Date.now()}@agentbuild`, `DTSTAMP:${z(new Date())}`, `DTSTART:${z(start)}`, `DTEND:${z(end)}`, `SUMMARY:${CONFIG.name} Workshop`, `LOCATION:${CONFIG.venue}`, "DESCRIPTION:Half-day build-first AI agent workshop.", "END:VEVENT", "END:VCALENDAR"].join("\r\n");
+    const ics = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//AgentiX//EN", "BEGIN:VEVENT", `UID:${Date.now()}@agentix`, `DTSTAMP:${z(new Date())}`, `DTSTART:${z(start)}`, `DTEND:${z(end)}`, `SUMMARY:${CONFIG.name} Workshop`, `LOCATION:${CONFIG.venue}`, "DESCRIPTION:Half-day build-first AI agent workshop.", "END:VEVENT", "END:VCALENDAR"].join("\r\n");
     const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([ics], {type: "text/calendar"})); a.download = "ai-agent-workshop.ics"; a.click();
   });
 })();
