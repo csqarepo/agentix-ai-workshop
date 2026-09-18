@@ -4,7 +4,7 @@
  */
 const SHEET_NAME = "Registrations";
 const HEADERS = [
-  "Submitted at", "Status", "Full name", "Work email", "Company", "Role", "AI experience",
+  "Submitted at", "Status", "Full name", "Personal email", "Company", "Role", "AI experience",
   "Preferred agent", "LinkedIn", "Teammates", "Dietary needs", "Consent", "Duplicate email", "Notes",
   "Phone number", "Built AI workflow, automation, or agent", "AI usage statement", "Personal AI tool access"
 ];
@@ -56,6 +56,7 @@ function getSheet() {
     const missing = HEADERS.slice(sheet.getLastColumn());
     sheet.getRange(1, sheet.getLastColumn() + 1, 1, missing.length).setValues([missing]).setFontWeight("bold").setBackground("#0d1333").setFontColor("#ffffff");
   }
+  sheet.getRange(1, 4).setValue("Personal email");
   return sheet;
 }
 
