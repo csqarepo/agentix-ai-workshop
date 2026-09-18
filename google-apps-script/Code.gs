@@ -6,7 +6,7 @@ const SHEET_NAME = "Registrations";
 const HEADERS = [
   "Submitted at", "Status", "Full name", "Work email", "Company", "Role", "AI experience",
   "Preferred agent", "LinkedIn", "Teammates", "Dietary needs", "Consent", "Duplicate email", "Notes",
-  "Phone number", "Built AI workflow, automation, or agent", "AI usage statement"
+  "Phone number", "Built AI workflow, automation, or agent", "AI usage statement", "Personal AI tool access"
 ];
 const FIELDS = ["name", "email", "company", "role", "experience", "agent", "linkedin", "teammates", "dietary", "consent"];
 
@@ -15,7 +15,7 @@ function doPost(e) {
   try {
     lock.waitLock(10000);
     const data = JSON.parse(e.postData.contents);
-    if (!data.name || !data.email || !data.phone || !data.company || !data.role || !data.aiBuilt || !data.aiStatement) {
+    if (!data.name || !data.email || !data.phone || !data.company || !data.role || !data.aiBuilt || !data.aiToolAccess) {
       return json({ok: false, error: "Missing required fields"});
     }
 
@@ -27,7 +27,7 @@ function doPost(e) {
       new Date(), "Pending",
       ...FIELDS.map(f => clean(f === "email" ? email : data[f])),
       emails.includes(email) ? "Yes" : "", "",
-      clean(data.phone), clean(data.aiBuilt), clean(data.aiStatement)
+      clean(data.phone), clean(data.aiBuilt), clean(data.aiStatement), clean(data.aiToolAccess)
     ]);
     return json({ok: true});
   } catch (err) {

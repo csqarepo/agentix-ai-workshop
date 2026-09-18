@@ -34,7 +34,7 @@ One-time setup (about 5 minutes):
 
 If you edit `Code.gs` later, use **Deploy → Manage deployments → Edit → New version** so the same URL keeps working.
 
-Columns saved: Submitted at, Status, Full name, Work email, Company, Role, AI experience, Preferred agent, LinkedIn, Teammates, Dietary needs, Consent, Duplicate email (flags a repeat email), Notes (for your team), Phone number, AI workflow/automation/agent experience, and AI usage statement.
+New submissions save the applicant's contact and professional details, AI experience, personal AI tool access, consent, and duplicate-email status. Legacy columns are retained in existing Sheets for backward compatibility.
 
 Status has a dropdown: Pending, Approved, Rejected, Paid, Ticket sent.
 
