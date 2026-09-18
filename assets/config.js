@@ -14,7 +14,7 @@ const CONFIG = {
   cost: "No. There is a nominal registration fee of ₹249, so seats go to people who are serious about attending. You pay it only after the CSQA Team reviews your profile and invites you to register. The fee also helps us plan the logistics carefully and deliver the best possible experience for every attendee.",
   registrationCloses: "2026-09-28",
   hashtag: "#AgentiX",
-  contactEmail: "events@example.com",
+  contactEmail: "csqa.gujarat@gmail.com",
   // Google Apps Script web app URL that saves registrations to the Google Sheet (see README).
   formEndpoint: "https://script.google.com/macros/s/AKfycbzsEp4DXprCQZNFb0H7XVwK70rFfQDs9cdQg20pJSWGwMD85G_Q3cPCfCaJkAUxk8Vg/exec",
   // Or send everyone to an external form (Luma, Google Form). Replaces the built-in form.
