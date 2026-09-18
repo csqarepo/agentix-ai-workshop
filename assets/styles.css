@@ -156,3 +156,4 @@ footer .brandbar{justify-content:center;flex-wrap:wrap;margin-bottom:18px}
 .lg-agentix{display:inline-flex;flex-direction:column;align-items:flex-end;white-space:nowrap}
 .lg-agentix small{font-size:.42rem;letter-spacing:.08em;margin-top:3px}
 .lg-agentix em{font:700 .45rem Poppins;font-style:normal;letter-spacing:.1em;color:var(--navy)} .lg-agentix em b{color:var(--orange)}
+img.ps-mark{object-fit:contain}
