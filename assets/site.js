@@ -6,7 +6,7 @@
   // Drop the real logo at assets/logos/productsquads.png (or .svg) and it is used automatically;
   // the drawn mark below is only a fallback for when that file is missing.
   window.PS_FALLBACK = `<svg class="ps-mark" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="psg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b2ff7"/><stop offset="1" stop-color="#5b2bd6"/></linearGradient></defs><path d="M20 2 36 11v18L20 38 4 29V11z" fill="url(#psg)"/><path d="M15 29V12h7a6 6 0 0 1 0 12h-3" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round"/></svg>`;
-  const PS_MARK = `<img class="ps-mark" src="assets/logos/productsquads.png" alt="" onerror="this.outerHTML=window.PS_FALLBACK">`;
+  const PS_MARK = `<img class="ps-mark" src="assets/logos/productsquadss_logo.jpeg" alt="" onerror="this.outerHTML=window.PS_FALLBACK">`;
   const BRAND = (full) => `
     ${full ? `<span class="lg-csqa hide-md">CS<b>QA</b><small>Community of Software QA</small></span><span class="sep hide-md"></span>` : ""}
     <span class="lg-agentix"><span>Agenti<i>X</i></span><small>HUMAN CREATIVITY. AI MULTIPLIED.</small><em>BY CS<b>QA</b></em></span>
