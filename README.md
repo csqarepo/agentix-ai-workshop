@@ -34,7 +34,7 @@ One-time setup (about 5 minutes):
 
 If you edit `Code.gs` later, use **Deploy → Manage deployments → Edit → New version** so the same URL keeps working.
 
-Columns saved: Submitted at, Status, Full name, Work email, Company, Role, AI experience, Preferred agent, LinkedIn, Teammates, Dietary needs, Consent, Duplicate email (flags a repeat email), Notes (for your team).
+Columns saved: Submitted at, Status, Full name, Work email, Company, Role, AI experience, Preferred agent, LinkedIn, Teammates, Dietary needs, Consent, Duplicate email (flags a repeat email), Notes (for your team), Phone number, AI workflow/automation/agent experience, and AI usage statement.
 
 Status has a dropdown: Pending, Approved, Rejected, Paid, Ticket sent.
 

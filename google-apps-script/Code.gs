@@ -5,7 +5,8 @@
 const SHEET_NAME = "Registrations";
 const HEADERS = [
   "Submitted at", "Status", "Full name", "Work email", "Company", "Role", "AI experience",
-  "Preferred agent", "LinkedIn", "Teammates", "Dietary needs", "Consent", "Duplicate email", "Notes"
+  "Preferred agent", "LinkedIn", "Teammates", "Dietary needs", "Consent", "Duplicate email", "Notes",
+  "Phone number", "Built AI workflow, automation, or agent", "AI usage statement"
 ];
 const FIELDS = ["name", "email", "company", "role", "experience", "agent", "linkedin", "teammates", "dietary", "consent"];
 
@@ -14,7 +15,9 @@ function doPost(e) {
   try {
     lock.waitLock(10000);
     const data = JSON.parse(e.postData.contents);
-    if (!data.name || !data.email || !data.company || !data.role) return json({ok: false, error: "Missing required fields"});
+    if (!data.name || !data.email || !data.phone || !data.company || !data.role || !data.aiBuilt || !data.aiStatement) {
+      return json({ok: false, error: "Missing required fields"});
+    }
 
     const sheet = getSheet();
     const email = String(data.email).trim().toLowerCase();
@@ -23,7 +26,8 @@ function doPost(e) {
     sheet.appendRow([
       new Date(), "Pending",
       ...FIELDS.map(f => clean(f === "email" ? email : data[f])),
-      emails.includes(email) ? "Yes" : "", ""
+      emails.includes(email) ? "Yes" : "", "",
+      clean(data.phone), clean(data.aiBuilt), clean(data.aiStatement)
     ]);
     return json({ok: true});
   } catch (err) {
@@ -48,6 +52,9 @@ function getSheet() {
     sheet.setFrozenRows(1);
     const rule = SpreadsheetApp.newDataValidation().requireValueInList(["Pending", "Approved", "Rejected", "Paid", "Ticket sent"], true).build();
     sheet.getRange("B2:B").setDataValidation(rule);
+  } else if (sheet.getLastColumn() < HEADERS.length) {
+    const missing = HEADERS.slice(sheet.getLastColumn());
+    sheet.getRange(1, sheet.getLastColumn() + 1, 1, missing.length).setValues([missing]).setFontWeight("bold").setBackground("#0d1333").setFontColor("#ffffff");
   }
   return sheet;
 }

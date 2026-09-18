@@ -90,10 +90,17 @@ ul.clean{list-style:none;padding:0;margin:0} ul.clean li{padding:6px 0;color:var
 /* form */
 form{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px}
 .field{display:flex;flex-direction:column;gap:6px} .field.full{grid-column:1/-1}
-label.l{font-weight:600;font-size:.92rem}
+fieldset.field{min-width:0;margin:0;padding:0;border:0}
+label.l,legend.l{font-weight:600;font-size:.92rem}
 input,select{font:inherit;color:var(--text);background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:11px 12px;width:100%}
 .err{color:#e5484d;font-size:.82rem;min-height:1em} .invalid{border-color:#e5484d}
 .check{display:flex;gap:10px;align-items:flex-start} .check input{width:auto;margin-top:5px}
+.radio-group{display:grid;gap:2px;margin-top:4px;padding-left:2px}
+.radio-option{display:flex;align-items:center;gap:11px;min-height:42px;padding:8px 4px;border-bottom:1px solid var(--border);cursor:pointer;color:var(--text)}
+.radio-option:last-child{border-bottom:0}
+.radio-option input{width:18px;height:18px;margin:0;accent-color:var(--primary);flex:none}
+.radio-option:has(input:checked){color:var(--navy);font-weight:600}
+.field.has-error .radio-group{border-left:3px solid #e5484d;padding-left:10px}
 @media(max-width:640px){form{grid-template-columns:1fr}}
 .success{display:none;text-align:center;padding:24px} .success.show{display:block}
 /* faq */

@@ -83,12 +83,24 @@
   if (form && CONFIG.externalRegisterUrl) {
     form.outerHTML = `<div style="text-align:center;padding:24px"><a class="btn btn-primary" href="${CONFIG.externalRegisterUrl}" target="_blank" rel="noopener">Express interest on the event page →</a></div>`;
   } else if (form) {
-    const setErr = (el, msg) => { el.closest(".field").querySelector(".err").textContent = msg || ""; el.classList.toggle("invalid", !!msg); };
+    const setErr = (el, msg) => {
+      const field = el.closest(".field");
+      field.querySelector(".err").textContent = msg || "";
+      field.classList.toggle("has-error", !!msg);
+      el.classList.toggle("invalid", !!msg);
+    };
     const validate = () => {
       let ok = true;
+      const radioGroups = new Set();
       form.querySelectorAll("input,select").forEach(el => {
         let msg = "";
-        if (el.type === "checkbox" && el.required && !el.checked) msg = "Please agree to continue.";
+        if (el.type === "radio") {
+          if (radioGroups.has(el.name)) return;
+          radioGroups.add(el.name);
+          const radios = [...form.querySelectorAll(`input[type="radio"][name="${el.name}"]`)];
+          msg = radios.some(radio => radio.checked) ? "" : "Please select an option.";
+          radios.forEach(radio => radio.classList.toggle("invalid", !!msg));
+        } else if (el.type === "checkbox" && el.required && !el.checked) msg = "Please agree to continue.";
         else if (el.required && !el.value.trim()) msg = "This field is required.";
         else if (el.value && !el.checkValidity()) msg = el.type === "email" ? "Enter a valid email." : "Enter a valid URL.";
         setErr(el, msg); if (msg) ok = false;
