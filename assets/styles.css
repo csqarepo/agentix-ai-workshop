@@ -156,3 +156,12 @@ footer .brandbar{justify-content:center;flex-wrap:wrap;margin-bottom:18px}
 .lg-agentix{display:inline-flex;flex-direction:column;align-items:flex-end;white-space:nowrap}
 .lg-agentix small{font-size:.42rem;letter-spacing:.08em;margin-top:3px}
 .lg-agentix em{font:700 .45rem Poppins;font-style:normal;letter-spacing:.1em;color:var(--navy)} .lg-agentix em b{color:var(--orange)}
+
+/* ProductSquads lockup */
+.lg-ps{position:relative;padding-top:14px;align-items:center;gap:9px}
+.lg-ps .ps-mark{width:34px;height:34px}
+.lg-ps .hosted{position:absolute;top:0;left:43px;margin:0;font:500 .62rem Poppins;color:var(--muted)}
+.ps-word{display:flex;flex-direction:column;line-height:.94}
+.ps-word b{font:800 1.02rem Poppins,sans-serif;color:#7a1fd6;letter-spacing:.01em}
+.ps-word i{font:700 .72rem Poppins,sans-serif;font-style:normal;color:#c81fe0;letter-spacing:.285em}
+footer .lg-ps{padding-top:0} footer .lg-ps .hosted{display:none}
