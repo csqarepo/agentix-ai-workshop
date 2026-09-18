@@ -46,9 +46,6 @@
   };
   document.querySelectorAll("[data-cfg]").forEach(el => { if (vals[el.dataset.cfg] != null) el.textContent = vals[el.dataset.cfg]; });
   document.querySelectorAll("[data-mail]").forEach(el => el.href = "mailto:" + CONFIG.contactEmail);
-  const shareUrl = "https://www.linkedin.com/sharing/share-offsite/?url=" + encodeURIComponent(new URL("index.html", location.href).href);
-  document.querySelectorAll(".share").forEach(a => a.href = shareUrl);
-
   // agenda: bar, legend, timeline (compact on home via data-compact)
   const bar = document.getElementById("bar"), legend = document.getElementById("legend"), tl = document.getElementById("timeline");
   let t = new Date(start);
