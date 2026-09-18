@@ -3,12 +3,12 @@
   const NAV = [["index.html", "Home", "home"], ["agenda.html", "Agenda", "agenda"], ["build.html", "What You'll Build", "build"], ["faq.html", "FAQ", "faq"]];
 
   // shared nav + footer
-  const PS_MARK = `<svg class="ps-mark" viewBox="0 0 44 44" aria-hidden="true"><defs><linearGradient id="psg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#7a1fd6"/><stop offset="1" stop-color="#c81fe0"/></linearGradient></defs><path d="M22 1.5 40 11.8v20.4L22 42.5 4 32.2V11.8z" fill="url(#psg)"/><path d="M17 33V13h7.5a6.5 6.5 0 0 1 0 13H21" fill="none" stroke="#fff" stroke-width="4.4" stroke-linecap="square"/><path d="m21 17 4.6 2.7v5.4L21 27.8l-4.6-2.7v-5.4z" fill="url(#psg)" stroke="#fff" stroke-width="1.6"/></svg>`;
+  const PS_MARK = `<svg class="ps-mark" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="psg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b2ff7"/><stop offset="1" stop-color="#5b2bd6"/></linearGradient></defs><path d="M20 2 36 11v18L20 38 4 29V11z" fill="url(#psg)"/><path d="M15 29V12h7a6 6 0 0 1 0 12h-3" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round"/></svg>`;
   const BRAND = (full) => `
     ${full ? `<span class="lg-csqa hide-md">CS<b>QA</b><small>Community of Software QA</small></span><span class="sep hide-md"></span>` : ""}
     <span class="lg-agentix"><span>Agenti<i>X</i></span><small>HUMAN CREATIVITY. AI MULTIPLIED.</small><em>BY CS<b>QA</b></em></span>
     <span class="sep hide-md"></span>
-    <span class="lg-ps hide-md"><span class="hosted">Hosted at</span>${PS_MARK}<span class="ps-word"><b>PRODUCT</b><i>SQUADS</i></span></span>`;
+    <span class="lg-ps hide-md">${PS_MARK}<span><span class="hosted">Hosted at</span>ProductSquads</span></span>`;
   document.getElementById("nav").outerHTML = `<nav><div class="wrap">
     <a class="brandbar" href="index.html" aria-label="AgentiX by CSQA, hosted at ProductSquads">${BRAND(false)}</a>
     <div class="links" id="links">${NAV.map(([h, l, k]) => `<a href="${h}"${k === page ? ' class="active" aria-current="page"' : ""}>${l}</a>`).join("")}</div>
