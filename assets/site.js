@@ -24,7 +24,7 @@
     <div class="footer-links" role="navigation" aria-label="Footer navigation">
       ${NAV.map(([h, l, k]) => `<a href="${h}"${k === page ? ' class="active" aria-current="page"' : ""}>${l}</a>`).join("")}
       <a data-mail>Contact us</a>
-      <a class="share" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
+      <a href="${CONFIG.linkedinUrl}" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
     </div>
     <div class="footer-actions"><span class="footer-hashtag" data-cfg="hashtag"></span>${page === "register" ? "" : '<a class="btn btn-primary" href="register.html">Express Interest</a>'}</div>
   </div></footer>`;

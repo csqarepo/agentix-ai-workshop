@@ -15,6 +15,7 @@ const CONFIG = {
   registrationCloses: "2026-09-28",
   hashtag: "#AgentiX",
   contactEmail: "csqa.gujarat@gmail.com",
+  linkedinUrl: "https://www.linkedin.com/company/csqa/",
   // Google Apps Script web app URL that saves registrations to the Google Sheet (see README).
   formEndpoint: "https://script.google.com/macros/s/AKfycbzsEp4DXprCQZNFb0H7XVwK70rFfQDs9cdQg20pJSWGwMD85G_Q3cPCfCaJkAUxk8Vg/exec",
   // Or send everyone to an external form (Luma, Google Form). Replaces the built-in form.
