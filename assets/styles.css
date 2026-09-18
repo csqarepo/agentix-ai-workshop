@@ -90,6 +90,7 @@ ul.clean{list-style:none;padding:0;margin:0} ul.clean li{padding:6px 0;color:var
 /* form */
 form{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px}
 .field{display:flex;flex-direction:column;gap:6px} .field.full{grid-column:1/-1}
+.field:not(.full){display:grid;grid-template-rows:1fr auto auto;align-self:stretch}
 fieldset.field{min-width:0;margin:0;padding:0;border:0}
 label.l,legend.l{font-weight:600;font-size:.92rem}
 input,select{font:inherit;color:var(--text);background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:11px 12px;width:100%}
@@ -101,7 +102,9 @@ input,select{font:inherit;color:var(--text);background:var(--bg);border:1px soli
 .radio-option input{width:18px;height:18px;margin:0;accent-color:var(--primary);flex:none}
 .radio-option:has(input:checked){color:var(--navy);font-weight:600}
 .field.has-error .radio-group{border-left:3px solid #e5484d;padding-left:10px}
-@media(max-width:640px){form{grid-template-columns:1fr}}
+.form-submit{align-items:flex-start}
+.form-submit .btn{width:auto;min-width:210px;justify-content:center}
+@media(max-width:640px){form{grid-template-columns:1fr}.form-submit .btn{width:100%}}
 .success{display:none;text-align:center;padding:24px} .success.show{display:block}
 /* faq */
 .faq-head .lead a{color:var(--navy);font-weight:700;text-decoration-color:var(--blue);text-decoration-thickness:2px;text-underline-offset:4px}
