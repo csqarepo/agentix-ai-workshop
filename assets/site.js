@@ -14,7 +14,7 @@
     <a class="brandbar" href="index.html" aria-label="AgentiX by CSQA, hosted at ProductSquads">${BRAND(false)}</a>
     <div class="links" id="links">${NAV.map(([h, l, k]) => `<a href="${h}"${k === page ? ' class="active" aria-current="page"' : ""}>${l}</a>`).join("")}</div>
     <div style="display:flex;gap:8px;align-items:center">
-      <a class="btn btn-primary" href="register.html">Express Interest</a>
+      <a class="btn btn-primary" href="register.html"><span class="cta-label-full">Express Interest</span><span class="cta-label-short">Interest</span></a>
       <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="links">☰</button>
     </div></div></nav>`;
   document.getElementById("footer").outerHTML = `<footer><div class="wrap">
