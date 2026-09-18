@@ -8,7 +8,7 @@
   window.PS_FALLBACK = `<svg class="ps-mark" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="psg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b2ff7"/><stop offset="1" stop-color="#5b2bd6"/></linearGradient></defs><path d="M20 2 36 11v18L20 38 4 29V11z" fill="url(#psg)"/><path d="M15 29V12h7a6 6 0 0 1 0 12h-3" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round"/></svg>`;
   const PS_MARK = `<img class="ps-mark" src="assets/logos/productsquadss_logo.jpeg" alt="" onerror="this.outerHTML=window.PS_FALLBACK">`;
   const BRAND = (full) => `
-    ${full ? `<span class="lg-csqa hide-md">CS<b>QA</b><small>Community of Software QA</small></span><span class="sep hide-md"></span>` : ""}
+    ${full ? `<img class="lg-csqa-img" src="assets/logos/CSQA.png" alt="CSQA — Community of Software QA" onerror="this.outerHTML='<span class=&quot;lg-csqa&quot;>CS<b>QA</b><small>Community of Software QA</small></span>'"><span class="sep"></span>` : ""}
     <span class="lg-agentix"><span>Agenti<i>X</i></span><small>HUMAN CREATIVITY. AI MULTIPLIED.</small><em>BY CS<b>QA</b></em></span>
     <span class="sep hide-md"></span>
     <span class="lg-ps hide-md">${PS_MARK}<span><span class="hosted">Hosted at</span>ProductSquads</span></span>`;
@@ -22,7 +22,7 @@
   document.getElementById("footer").outerHTML = `<footer><div class="wrap">
     <div class="brandbar">${BRAND(true).replaceAll("hide-md","")}</div>
     <p class="tagline" style="text-align:center"><b data-cfg="name"></b> · Same community. Bigger possibilities.</p>
-    <p>AgentiX by CSQA · Hosted at ProductSquads</p>
+    <p>AgentiX is a CSQA initiative · Hosted at ProductSquads</p>
     <p>${NAV.map(([h, l]) => `<a href="${h}">${l}</a>`).join(" · ")} · <a data-mail>Contact us</a> · <a class="share" target="_blank" rel="noopener">Share on LinkedIn</a> · <span data-cfg="hashtag"></span></p>
     ${page === "register" ? "" : '<a class="btn btn-primary" href="register.html" style="margin-top:12px">Register now</a>'}
   </div></footer>`;
