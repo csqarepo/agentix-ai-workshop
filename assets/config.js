@@ -4,7 +4,7 @@ const CONFIG = {
   shortName: "AgentiX",
   host: "ProductSquads",
   start: "2026-10-02T09:30:00+05:30",   // ISO start time, with timezone offset
-  end: "2026-10-02T13:30:00+05:30",     // Target finish time
+  end: "2026-10-02T15:00:00+05:30",     // Lunch and close finish time
   timezone: "IST",
   timeZoneId: "Asia/Kolkata",
   venue: "ProductSquads, Ahmedabad",
@@ -23,19 +23,22 @@ const CONFIG = {
 };
 
 const AGENDA = [
+  {title: "Refreshments & Meet and Greet", short: "Welcome", min: 30, color: "var(--accent-5)",
+   desc: "Arrive, settle in, enjoy refreshments, and connect with fellow participants before the workshop begins.",
+   points: ["Registration and refreshments", "Meet fellow participants and the CSQA volunteers"]},
   {title: "Building an Agent & Best Practices", short: "Talk", min: 45, color: "var(--primary)",
    desc: "An expert-led session on the first steps of building an AI agentic solution, covering what an agent is, best practices, Skills, MCPs, and how the pieces fit together.",
    points: ["What an agent is, and when an agentic solution makes sense", "The role of Skills, MCPs, tools, prompts, and context", "Best practices for scoping, designing, and starting your first AI agent"]},
-  {title: "Tea Break & Networking", short: "Break", min: 15, color: "var(--accent-5)",
-   desc: "A short break to grab a tea or coffee and meet other attendees.",
-   points: ["Tea and coffee", "Meet the other builders"]},
-  {title: "Team Forming & Seating", short: "Teams", min: 30, color: "var(--accent)",
+  {title: "Team Forming & Seating", short: "Teams", min: 15, color: "var(--accent)",
    desc: "Meet your CSQA-assigned team, receive the problem statement, and organize the build.",
    points: ["Meet your assigned team", "Receive the team's problem statement", "Ideate and divide responsibilities"]},
-  {title: "Build Time", short: "Build", min: 120, color: "var(--accent-4)",
+  {title: "Build Time", short: "Build", min: 180, color: "var(--accent-4)",
    desc: "Teams apply the same approach to build an agent for a small, practical problem.",
    points: ["Define the agent's job and inputs", "Write a Skill, connect tools through MCP", "Iterate on real examples; mentors walk the floor"]},
-  {title: "Presentations", short: "Demos", min: 30, color: "var(--accent-2)",
+  {title: "Team Demos", short: "Demos", min: 30, color: "var(--accent-2)",
    desc: "Two selected teams demo what they built.",
-   points: ["Two team demos", "What worked, what didn't", "Wrap-up and next steps"]}
+   points: ["Two team demos", "What worked, what didn't", "Wrap-up and next steps"]},
+  {title: "Lunch & Farewell", short: "Lunch", min: 30, color: "var(--accent-3)",
+   desc: "Close the workshop over a light lunch and conversations with the community.",
+   points: ["Light lunch", "Connect with participants, mentors, and the CSQA Team"]}
 ];
