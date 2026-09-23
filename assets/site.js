@@ -4,6 +4,17 @@
   const registrationLabel = CONFIG.registrationOpen ? "Express Interest" : "Registration Closed";
   const registrationShortLabel = CONFIG.registrationOpen ? "Interest" : "Closed";
 
+  document.querySelectorAll("[data-registration-open]").forEach(el => { el.hidden = !CONFIG.registrationOpen; });
+  document.querySelectorAll("[data-registration-closed]").forEach(el => { el.hidden = CONFIG.registrationOpen; });
+  document.querySelectorAll("[data-registration-label]").forEach(el => { el.textContent = registrationLabel; });
+
+  if (page === "register" && !CONFIG.registrationOpen) {
+    document.title = "Registration Closed · Agentic AI Workshop · AgentiX";
+    document.querySelector('meta[name="description"]')?.setAttribute("content", "The registration window for the Agentic AI Workshop is now closed. Contact CSQA if you are still interested in joining.");
+    document.querySelector('meta[property="og:title"]')?.setAttribute("content", "Registration Closed · Agentic AI Workshop · AgentiX");
+    document.querySelector('meta[property="og:description"]')?.setAttribute("content", "The registration window for the Agentic AI Workshop is now closed. Contact CSQA if you are still interested in joining.");
+  }
+
   // shared nav + footer
   window.PS_FALLBACK = `<svg class="ps-mark" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="psg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b2ff7"/><stop offset="1" stop-color="#5b2bd6"/></linearGradient></defs><path d="M20 2 36 11v18L20 38 4 29V11z" fill="url(#psg)"/><path d="M15 29V12h7a6 6 0 0 1 0 12h-3" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round"/></svg>`;
   const PS_MARK = `<img class="ps-mark" src="assets/logos/productsquadss_logo.jpeg" alt="" onerror="this.outerHTML=window.PS_FALLBACK">`;
