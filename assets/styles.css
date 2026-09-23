@@ -106,6 +106,14 @@ input,select{font:inherit;color:var(--text);background:var(--bg);border:1px soli
 .form-submit .btn{width:auto;min-width:210px;justify-content:center}
 @media(max-width:640px){form{grid-template-columns:1fr}.form-submit .btn{width:100%}}
 .success{display:none;text-align:center;padding:24px} .success.show{display:block}
+.registration-closed-section{padding:72px 0 88px}
+.registration-closed{max-width:820px;text-align:center}
+.registration-status{display:inline-flex;align-items:center;gap:9px;margin-bottom:18px;font:700 .78rem 'JetBrains Mono',monospace;color:var(--primary);text-transform:uppercase}
+.registration-status span{width:9px;height:9px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 5px rgba(255,107,44,.12)}
+.registration-closed h2{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:14px}
+.registration-closed p{max-width:690px;margin:0 auto 14px;color:var(--muted)}
+.registration-closed p a{font-weight:700;color:var(--navy);text-decoration-color:var(--blue);text-decoration-thickness:2px;text-underline-offset:4px}
+.registration-closed .cta{justify-content:center;margin-top:28px}
 /* faq */
 .faq-head .lead a{color:var(--navy);font-weight:700;text-decoration-color:var(--blue);text-decoration-thickness:2px;text-underline-offset:4px}
 .faq-page{padding-top:40px}
@@ -322,6 +330,9 @@ nav .btn{flex:none}
 
 @media(max-width:520px){
   .wrap{padding-left:16px;padding-right:16px}
+  .cta-label-full{display:none}
+  .cta-label-short{display:inline}
+  nav .btn{padding:8px 12px;font-size:.84rem}
   section{padding:48px 0}
   .page-head{padding:40px 0 22px}
   .page-head h1{font-size:2rem}
@@ -354,6 +365,9 @@ nav .btn{flex:none}
   footer .tagline{font-size:.66rem;letter-spacing:.14em}
   .footer-host{font-size:.86rem}
   .footer-links{gap:4px 16px}
+  .registration-closed-section{padding:48px 0 64px}
+  .registration-closed h2{font-size:1.9rem}
+  .registration-closed p{overflow-wrap:anywhere}
 }
 
 @media(max-width:380px){

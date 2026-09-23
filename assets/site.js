@@ -1,6 +1,8 @@
 (() => {
   const page = document.body.dataset.page;
   const NAV = [["index.html", "Home", "home"], ["agenda.html", "Agenda", "agenda"], ["build.html", "What You'll Build", "build"], ["faq.html", "FAQ", "faq"]];
+  const registrationLabel = CONFIG.registrationOpen ? "Express Interest" : "Registration Closed";
+  const registrationShortLabel = CONFIG.registrationOpen ? "Interest" : "Closed";
 
   // shared nav + footer
   window.PS_FALLBACK = `<svg class="ps-mark" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="psg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b2ff7"/><stop offset="1" stop-color="#5b2bd6"/></linearGradient></defs><path d="M20 2 36 11v18L20 38 4 29V11z" fill="url(#psg)"/><path d="M15 29V12h7a6 6 0 0 1 0 12h-3" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round"/></svg>`;
@@ -14,7 +16,7 @@
     <a class="brandbar" href="index.html" aria-label="AgentiX by CSQA, hosted at ProductSquads">${BRAND(false)}</a>
     <div class="links" id="links">${NAV.map(([h, l, k]) => `<a href="${h}"${k === page ? ' class="active" aria-current="page"' : ""}>${l}</a>`).join("")}</div>
     <div style="display:flex;gap:8px;align-items:center">
-      <a class="btn btn-primary" href="register.html"><span class="cta-label-full">Express Interest</span><span class="cta-label-short">Interest</span></a>
+      <a class="btn btn-primary" href="register.html"><span class="cta-label-full">${registrationLabel}</span><span class="cta-label-short">${registrationShortLabel}</span></a>
       <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="links">☰</button>
     </div></div></nav>`;
   document.getElementById("footer").outerHTML = `<footer><div class="wrap">
@@ -26,7 +28,7 @@
       <a data-mail>Contact us</a>
       <a href="${CONFIG.linkedinUrl}" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
     </div>
-    <div class="footer-actions"><span class="footer-hashtag" data-cfg="hashtag"></span>${page === "register" ? "" : '<a class="btn btn-primary" href="register.html">Express Interest</a>'}</div>
+    <div class="footer-actions"><span class="footer-hashtag" data-cfg="hashtag"></span>${page === "register" ? "" : `<a class="btn btn-primary" href="register.html">${registrationLabel}</a>`}</div>
   </div></footer>`;
   const menuBtn = document.getElementById("menuBtn"), links = document.getElementById("links");
   menuBtn.addEventListener("click", () => menuBtn.setAttribute("aria-expanded", links.classList.toggle("open")));
@@ -77,7 +79,9 @@
 
   // registration form
   const form = document.getElementById("regForm");
-  if (form && CONFIG.externalRegisterUrl) {
+  if (form && !CONFIG.registrationOpen) {
+    form.remove();
+  } else if (form && CONFIG.externalRegisterUrl) {
     form.outerHTML = `<div style="text-align:center;padding:24px"><a class="btn btn-primary" href="${CONFIG.externalRegisterUrl}" target="_blank" rel="noopener">Express interest on the event page →</a></div>`;
   } else if (form) {
     const setErr = (el, msg) => {
