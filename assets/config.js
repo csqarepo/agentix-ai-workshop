@@ -13,7 +13,7 @@ const CONFIG = {
   seats: "50–75",
   cost: "No. There is a nominal registration fee of ₹249, so seats go to people who are serious about attending. You pay it only after the CSQA Team reviews your profile and invites you to register. The fee also helps us plan the logistics carefully and deliver the best possible experience for every attendee.",
   registrationCloses: "2026-09-28",
-  registrationOpen: true,
+  registrationOpen: false,
   hashtag: "#AgentiX",
   contactEmail: "csqa.gujarat@gmail.com",
   linkedinUrl: "https://www.linkedin.com/company/csqa/",
